@@ -1,3 +1,29 @@
+# README - Portfólio Profissional da Fotógrafa Sara
+
+## Descrição
+
+Este repositório é dedicado ao portfólio profissional de uma fotógrafa. O projeto foi desenvolvido 'pro bono' para uma atividade de extensão e está em constante evolução para melhor representar o trabalho artístico e criativo. O objetivo inicial era simplesmente utilizar uma PaaS e cumprir com o trabalho, porém, agora, é criar uma plataforma visualmente atraente e funcional para exibir as fotografias de forma elegante e acessível, bem como uma experiência incrível para a empresária e seus clientes.
+
+## Status do Projeto
+
+Atualmente, o projeto está em desenvolvimento. Agradecemos a sua visita e feedback!
+
+## Próximos Passos
+
+Abaixo está uma checklist com as etapas planejadas para a continuidade do desenvolvimento:
+
+- [x] Testar a responsividade em dispositivos móveis
+- [ ] Melhorar a estrutura do código
+- [ ] Refatorar para aumentar a eficiência
+- [ ] Integrar com plataformas de redes sociais (Google Agenda, whatsapp? Um bot integrando tudo? Quem sabe!)
+
+
+## Contribuições
+
+Embora este projeto seja feito 'pro bono', sugestões e contribuições são sempre bem-vindas! Se você tiver ideias ou quiser ajudar, sinta-se à vontade para abrir uma issue ou pull request.
+
+Agradecemos pelo seu interesse e apoio ao projeto!
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
