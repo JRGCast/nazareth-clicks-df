@@ -1,4 +1,3 @@
-'use client'
 import React, { useState, useEffect, useRef } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -6,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { CameraIcon, MapPinIcon, PhoneIcon, MailIcon } from 'lucide-react'
 
-export default function Home() {
+export default function PhotographerPortfolio() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const feedbacks = [
@@ -25,10 +24,10 @@ export default function Home() {
     return () => clearInterval(timer)
   }, [])
 
-  const headerRef = useRef(null)
-  const servicesRef = useRef(null)
-  const testimonialsRef = useRef(null)
-  const contactRef = useRef(null)
+  const inicioRef = useRef(null)
+  const servicosRef = useRef(null)
+  const depoimentosRef = useRef(null)
+  const contatoRef = useRef(null)
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -36,6 +35,7 @@ export default function Home() {
       behavior: 'smooth'
     })
   }
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Fixed Header */}
@@ -44,10 +44,10 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-gray-800 text-center">Nazareth Clicks DF</h1>
           <nav className="mt-4">
             <ul className="flex justify-center space-x-6">
-              <li><Button variant="ghost" onClick={() => scrollToSection(headerRef)}>Início</Button></li>
-              <li><Button variant="ghost" onClick={() => scrollToSection(servicesRef)}>Serviços</Button></li>
-              <li><Button variant="ghost" onClick={() => scrollToSection(testimonialsRef)}>Depoimentos</Button></li>
-              <li><Button variant="ghost" onClick={() => scrollToSection(contactRef)}>Contato</Button></li>
+              <li><Button variant="ghost" onClick={() => scrollToSection(inicioRef)}>Início</Button></li>
+              <li><Button variant="ghost" onClick={() => scrollToSection(servicosRef)}>Serviços</Button></li>
+              <li><Button variant="ghost" onClick={() => scrollToSection(depoimentosRef)}>Depoimentos</Button></li>
+              <li><Button variant="ghost" onClick={() => scrollToSection(contatoRef)}>Contato</Button></li>
             </ul>
           </nav>
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="pt-32">
         {/* Introduction */}
-        <section ref={headerRef} id="inicio" className="py-20 bg-gray-800 text-white">
+        <section ref={inicioRef} id="inicio" className="py-20 bg-gray-800 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-5xl font-bold mb-4">Capturando Momentos Especiais</h2>
             <p className="text-xl mb-8">Transformando suas memórias em arte fotográfica</p>
@@ -65,7 +65,7 @@ export default function Home() {
         </section>
 
         {/* Services and Prices */}
-        <section ref={servicesRef} id="servicos" className="py-20">
+        <section ref={servicosRef} id="servicos" className="py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12">Nossos Serviços</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -119,7 +119,7 @@ export default function Home() {
         </section>
 
         {/* Customer Feedback Carousel */}
-        <section ref={testimonialsRef} id="depoimentos" className="py-20 bg-gray-100">
+        <section ref={depoimentosRef} id="depoimentos" className="py-20 bg-gray-100">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12">O que nossos clientes dizem</h2>
             <div className="max-w-2xl mx-auto">
@@ -162,39 +162,42 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12">Nossa Localização</h2>
             <div className="max-w-3xl mx-auto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293.10735179777595!2d-47.89262235055686!3d-15.763365105693506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b02c08eb19f%3A0x676d8534e25e85bc!2sMARIA%20PIMENTA%20CAL%C3%87ADOS%20LTDA!5e1!3m2!1spt-BR!2sbr!4v1727155789885!5m2!1spt-BR!2sbr" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              <img
+                src="/placeholder.svg?height=400&width=800"
+                alt="Mapa de localização"
+                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+              />
               <div className="mt-4 text-center">
                 <p className="flex items-center justify-center text-gray-600">
                   <MapPinIcon className="w-5 h-5 mr-2" />
-                  708/709 ASA NORTE, ao lado da Maria Pimenta Calçados, Brasília, DF - Brasil
+                  708/709 ASA NORTE, Brasília, DF - Brasil
                 </p>
-               
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Form */}
-        <section ref={contactRef} id="contato" className="py-20 bg-gray-800 text-white">
+        <section ref={contatoRef} id="contato" className="py-20 bg-gray-800 text-white">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12">Entre em Contato</h2>
             <div className="max-w-2xl mx-auto">
-              {/* <form className="space-y-4">
+              <form className="space-y-4">
                 <Input type="text" placeholder="Nome" className="bg-gray-700 text-white" />
                 <Input type="email" placeholder="E-mail" className="bg-gray-700 text-white" />
                 <Input type="tel" placeholder="Telefone" className="bg-gray-700 text-white" />
                 <Textarea placeholder="Mensagem" className="bg-gray-700 text-white" />
                 <Button type="submit" size="lg" className="w-full">Enviar Mensagem</Button>
-              </form> */}
+              </form>
             </div>
             <div className="mt-12 text-center space-y-2">
               <p className="flex items-center justify-center">
                 <PhoneIcon className="w-5 h-5 mr-2" />
-                        <a href="https://api.whatsapp.com/send/?phone=5561982775830&text=Eu+quero+fotos+no+estilo+&type=phone_number&app_absent=0" target="_blank" target="_blank" rel="noopener noreferrer">(61) 9 8277-5830</a>
+                (61) 9999-9999
               </p>
               <p className="flex items-center justify-center">
                 <MailIcon className="w-5 h-5 mr-2" />
-                <a href="mailto:nazarethclciksdf@gmail.com">nazarethclciksdf@gmail.com</a>
+                contato@nazarethclicksdf.com
               </p>
             </div>
           </div>
