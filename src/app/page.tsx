@@ -1,8 +1,8 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+// import { Input } from "@/components/ui/input"
+// import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { CameraIcon, MapPinIcon, PhoneIcon, MailIcon } from 'lucide-react'
 
@@ -162,7 +162,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12">Nossa Localização</h2>
             <div className="max-w-3xl mx-auto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293.10735179777595!2d-47.89262235055686!3d-15.763365105693506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b02c08eb19f%3A0x676d8534e25e85bc!2sMARIA%20PIMENTA%20CAL%C3%87ADOS%20LTDA!5e1!3m2!1spt-BR!2sbr!4v1727155789885!5m2!1spt-BR!2sbr" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293.10735179777595!2d-47.89262235055686!3d-15.763365105693506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b02c08eb19f%3A0x676d8534e25e85bc!2sMARIA%20PIMENTA%20CAL%C3%87ADOS%20LTDA!5e1!3m2!1spt-BR!2sbr!4v1727155789885!5m2!1spt-BR!2sbr" width="600" height="450" style={{border:0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               <div className="mt-4 text-center">
                 <p className="flex items-center justify-center text-gray-600">
                   <MapPinIcon className="w-5 h-5 mr-2" />
@@ -190,7 +190,7 @@ export default function Home() {
             <div className="mt-12 text-center space-y-2">
               <p className="flex items-center justify-center">
                 <PhoneIcon className="w-5 h-5 mr-2" />
-                        <a href="https://api.whatsapp.com/send/?phone=5561982775830&text=Eu+quero+fotos+no+estilo+&type=phone_number&app_absent=0" target="_blank" target="_blank" rel="noopener noreferrer">(61) 9 8277-5830</a>
+                        <a href="https://api.whatsapp.com/send/?phone=5561982775830&text=Eu+quero+fotos+no+estilo+&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">(61) 9 8277-5830</a>
               </p>
               <p className="flex items-center justify-center">
                 <MailIcon className="w-5 h-5 mr-2" />
